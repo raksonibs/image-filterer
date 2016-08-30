@@ -16,6 +16,7 @@
   "author": "Oskar Niburski <oskarniburski@gmail.com> (http://raksonibs.github.io)",
   "license": "ISC",
   "dependencies": {
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "restler": "^3.4.0"
   }
 }

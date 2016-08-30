@@ -1,5 +1,7 @@
 'use strict';
 
+var rest = require('restler');
+
 class ImageFilterer {
   constructor(items) {
     this.items = items || [];
@@ -27,8 +29,20 @@ class ImageFilterer {
       });
   }
 
+  testImageNonBrowser(url, item) {
+    return new Promise(function(resolve, reject) {
+      // console.log("TESTING IMAGE", url)
+      rest.get(url).on('success', function(data) {
+        // console.log("TESTED IMAGE");
+        resolve(item);
+      }).on('fail', function(data) {
+        resolve(undefined);
+      })
+    });
+  }
+
   cleanImages() {
-    console.log("cleaning images");
+    // console.log("cleaning images");
     var thisState = this;
     var promises = [];
     thisState.items.forEach((image) => {
@@ -40,13 +54,12 @@ class ImageFilterer {
 
   returnValidImages() {
     var promises = this.cleanImages();
-    debugger;
     Promise.all(promises).then(function(success) {
       var images = success.filter((image) => { return image !== undefined });
       return images;
     }, function(err) {
-      console.log('error over here', err);
-      return "Error";
+      // console.log('error over here', err);
+      return Error("Error");
     })
   }
 
