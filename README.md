@@ -1,8 +1,10 @@
-# Emoji Pad🐶🐕🐩🐺
+# Image Filterer
 
 [![Build Status](https://travis-ci.org/raksonibs/emoji-pad.svg?branch=master)](https://travis-ci.org/raksonibs/emoji-pad)
 
 Currently images have the form: {title: "1WI7", slug: null, image: "https://s3-us-west-2.amazonaws.com/badcomics/badcomics/gifs/145/original.png", rating: 0, name: null} with a keyable image attribute in the Object form.
+
+Also works on browser level where new Image() element is exposed.
 
 
 ## Install
