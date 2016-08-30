@@ -1,0 +1,21 @@
+{
+  "name": "image-filterer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --report test test"
+  },
+  "keywords": [
+    "images",
+    "image",
+    "filter",
+    "filterer",
+    "promises"
+  ],
+  "author": "Oskar Niburski <oskarniburski@gmail.com> (http://raksonibs.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.0.2"
+  }
+}
