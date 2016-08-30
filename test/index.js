@@ -1,5 +1,5 @@
 var assert = require('assert');
-var { ImageFilterer } = require('../index');
+var ImageFilterer = require('../index');
 
 describe('imageFilter', function() {  
   it('should filter bad images', function() {
